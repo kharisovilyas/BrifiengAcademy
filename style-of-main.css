@@ -7,7 +7,14 @@
   font-family: 'Montserrat', sans-serif;
   transition: all 0.3s ease;
 }
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
 
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out;
+}
 body{
   scroll-behavior: auto;
   overflow-y: scroll;
@@ -42,9 +49,10 @@ body::after{
   clip-path: circle(25% at right 80%);
   background-image: linear-gradient( 135deg, #276A7E 10%, #8FB4D4 100%);
 }
+
 header{
   height: 98vh;
-  width: 90%;
+  width: 98%;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -54,31 +62,38 @@ header{
   border-radius: 25px;
   margin: auto;
   margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-bottom: 1vh;align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
   position: relative;
 }
+
 header.scroll{
-  background: rgba(255, 255, 255, 1);
-  height: 20vh;
+  margin: auto;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  border-radius: 0%;
+  height: 8vh;
   z-index: 100;
   width: 100%;
   position: fixed;
-  transform: translateY(-100%);
 }
 
+.text-content.scroll{
+  display: none;
+}
+
+/*
 .newhead{
   position: fixed;
   background-color: #f2f2f2;
   height: 8vh;
-  width: 100vw;
+  width: 100%;
   z-index: 100;
   opacity: 0;
 }
-.newhead.head1{
-
-}
-.navbar1{
-  
+.navbar.without-text{
   width: 100%;
   padding: 10px 50px;
   justify-content: space-between;
@@ -88,57 +103,11 @@ header.scroll{
   position: fixed;
   transition: transform 0.3s ease-in-out;
 }
-.navbar1 .menu1{
-  display: flex;
-  flex-wrap: wrap;
-}
-.navbar1 .logo1 a{
-  text-decoration: none;
-  font-size: 22px;
-  color: #000;
-  font-weight: 500;
-}
-.navbar1 .menu1 li{
-  list-style: none;
-  margin: 0 6px;
-  float: right;
-}
-.navbar1 .menu1 a{
-  color: #000;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  display: block;
-  padding: 5px 10px;
-}
-.navbar1 .menu1 a:hover{
-  color: #f2f2f2;
-}
-.navbar1 .buttons input{
-  outline: none;
-  color: #000;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 12px;
-  padding: 6px 15px;
-  border: none;
-  margin: 0 8px;
-  margin-top: 3px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-image: linear-gradient( 135deg, #F5E5D5  10%, #C5D1EB 100%);
-}
-.navbar1 .buttons input:hover{
-  transform: scale(0.97);
-}
 .newhead.animation{
   opacity: 1;
   transition: all 1.0s;
   transform: translateY(0%);
-
-  transform: translateY(-100%);
-}
+}*/
 .navbar{
   margin: auto;
   width: 100%;
@@ -150,14 +119,6 @@ header.scroll{
   flex-direction: row;
   position: fixed;
 }
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-
 .navbar.scroll {
   transform: translateY(-100%);
 }
@@ -186,7 +147,7 @@ header.scroll{
   padding: 5px 10px;
 }
 .navbar .menu a:hover{
-  color: #f2f2f2;
+  color: #000;
 }
 .navbar .buttons input{
   outline: none;
@@ -206,6 +167,7 @@ header.scroll{
 }
 
 .button {
+  display: inline;
   outline: none;
   color: #000;
   font-size: 18px;
@@ -213,7 +175,7 @@ header.scroll{
   border-radius: 12px;
   padding: 6px 15px;
   border: none;
-  margin: 0 8px;
+  margin: 10px 2px 2px 0px;
   cursor: pointer;
   transition: all 0.3s ease;
   background-image: linear-gradient( 135deg, #F5E5D5  10%, #C5D1EB 100%);
