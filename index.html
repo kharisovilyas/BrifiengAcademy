@@ -9,7 +9,22 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
-
+<div class="newhead">
+  <nav class="navbar1">
+    <div class="logo1"><a href="">>Brifieng Академия</a></div>
+    <ul class="menu1">
+      <li><a href="#courses">Курсы</a></li>
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#teachers">Преподаватели</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <div class="buttons">
+      <!--<a href="login.html" class="button">Login</a>
+      <input type="button" value="Register"> -->
+      <a href="reg.html" class="button">Записаться на пробное занятие</a>
+    </div>
+  </nav>
+</div>
   <header>
     <nav class="navbar">
       <div class="logo"><a href="">>Brifieng Академия</a></div>
@@ -32,8 +47,6 @@
   </header>
   
   <div id ="courses" class="container">
-    <!--<input type="radio" name="dot" id="one">
-    <input type="radio" name="dot" id="two">-->
     <div class="text-content">
       <h3>Наши преподаватели</h3>
     </div>
@@ -156,6 +169,11 @@
   <div id ="teachers" class="container">
 
   </div>
+
+  </div>
+  <div id ="teachers" class="container">
+
+  </div>
   <div id ="contacts" class="container">
 
   </div>
@@ -177,6 +195,16 @@
       });
       window.addEventListener('scroll', function() {
         var navbar = document.querySelector('.navbar');
+        var header = document.querySelector('.header');
+        var scrollPosition = window.pageYOffset;
+        var newhead = document.querySelector('.newhead');
+  
+        if (scrollPosition > 0) {
+          navbar.classList.add('scroll');
+          newhead.classList.add('animation')
+        } else {
+          navbar.classList.remove('scroll');
+          newhead.classList.remove('animation')
         var header = document.querySelector('header');
         var scrollPosition = window.pageYOffset;
   

@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Montserrat', sans-serif;
   transition: all 0.3s ease;
 }
 
@@ -62,6 +63,79 @@ header.scroll{
   z-index: 100;
   width: 100%;
   position: fixed;
+  transform: translateY(-100%);
+}
+
+.newhead{
+  position: fixed;
+  background-color: #f2f2f2;
+  height: 8vh;
+  width: 100vw;
+  z-index: 100;
+  opacity: 0;
+}
+.newhead.head1{
+
+}
+.navbar1{
+  
+  width: 100%;
+  padding: 10px 50px;
+  justify-content: space-between;
+  align-items: start;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  transition: transform 0.3s ease-in-out;
+}
+.navbar1 .menu1{
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbar1 .logo1 a{
+  text-decoration: none;
+  font-size: 22px;
+  color: #000;
+  font-weight: 500;
+}
+.navbar1 .menu1 li{
+  list-style: none;
+  margin: 0 6px;
+  float: right;
+}
+.navbar1 .menu1 a{
+  color: #000;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 5px 10px;
+}
+.navbar1 .menu1 a:hover{
+  color: #f2f2f2;
+}
+.navbar1 .buttons input{
+  outline: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 6px 15px;
+  border: none;
+  margin: 0 8px;
+  margin-top: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: linear-gradient( 135deg, #F5E5D5  10%, #C5D1EB 100%);
+}
+.navbar1 .buttons input:hover{
+  transform: scale(0.97);
+}
+.newhead.animation{
+  opacity: 1;
+  transition: all 1.0s;
+  transform: translateY(0%);
 
   transform: translateY(-100%);
 }
@@ -109,7 +183,7 @@ header.scroll{
   font-weight: 500;
   transition: all 0.3s ease;
   display: block;
-  padding: 10px;
+  padding: 5px 10px;
 }
 .navbar .menu a:hover{
   color: #f2f2f2;
