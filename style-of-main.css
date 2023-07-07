@@ -24,7 +24,7 @@ body{
   display: flex;
   flex-direction: column;
   flex: auto;
-  background-image: linear-gradient( 135deg, #8fb4d2  10%, #8FB4D1 100%);
+  background-image: linear-gradient( 135deg, #f2f5f5  10%, #f2f2f2 100%);
   overflow: auto;
 }
 ::selection{
@@ -47,13 +47,33 @@ body::before{
 }
 body::after{
   opacity: 0.4;
-  clip-path: circle(25% at right 80%);
+  clip-path: circle(40% at right 80%);
   background-image: linear-gradient( 135deg, #276A7E 10%, #8FB4D4 100%);
 }
+.section {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: linear-gradient( 135deg, #f2f5f5  10%, #f2f2f2 100%);
+  z-index: 0;
+  position: relative;
+  justify-items: center;
+}
+.section::before,
+.section::after{
+  content: '';
+  position:absolute;
+  left: 0;
+  top: 100vh;
+  height: 100%;
+  width: 100%;
+}
+
 
 header{
-  height: 98vh;
-  width: 98%;
+  height: 90vh;
+  width: 95%;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -63,7 +83,7 @@ header{
   border-radius: 25px;
   margin: auto;
   margin-top: 1vh;
-  margin-bottom: 1vh;align-items: center; /* Выравнивание по вертикали */
+  margin-bottom: 9vh;align-items: center; /* Выравнивание по вертикали */
   justify-content: center; /* Выравнивание по горизонтали */
   position: relative;
 }
@@ -246,16 +266,31 @@ header.scroll{
   font-weight: 600;
   display: flex;
   align-items: center;
+  justify-self: center;
   position: relative;
 }
 .text-content h3{
-  font-size: 27px;
+  font-size: 35px;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  position: relative;
-  text-transform: uppercase;
   color: #333333;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content:start;
+  align-self: center;
+  position: relative;
+  margin-bottom: 3%;
+  margin-left: 5%;
+  background-color: #DCDEF5;
+  padding: 1px 3px;
+}
+.text-content .tabsHeader{
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  display: flex;
+  overflow-x: auto;
+  align-items: stretch;
 }
 .text-content p{
   font-size: 25px;
