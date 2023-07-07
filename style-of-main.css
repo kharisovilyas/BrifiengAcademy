@@ -7,6 +7,7 @@
   font-family: 'Montserrat', sans-serif;
   transition: all 0.3s ease;
 }
+
 @keyframes fadeOut {
   0% { opacity: 1; }
   100% { opacity: 0; }
@@ -122,7 +123,7 @@ header.scroll{
   font-weight: 500;
   transition: all 0.3s ease;
   display: block;
-  padding: 5px 10px;
+  padding: 2px 10px;
 }
 .navbar1 .menu1 a:hover{
   border-radius: 3px;
@@ -148,7 +149,7 @@ header.scroll{
 }
 .newhead.animation{
   opacity: 1;
-  transition: all 1.0s;
+  transition: all 0.7s;
   transform: translateY(0%);
 }
 
@@ -173,26 +174,31 @@ header.scroll{
 .navbar .menu{
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .navbar .logo a{
   text-decoration: none;
-  font-size: 22px;
+  font-size: 24px;
   color: #000;
   font-weight: 500;
 }
 .navbar .menu li{
   list-style: none;
-  margin: 0 6px;
+  margin: 0px 6px;
   float: right;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
 }
 .navbar .menu a{
   color: #000;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 500;
   transition: all 0.3s ease;
   display: block;
-  padding: 5px 10px;
+  padding: 4px 10px;
 }
 .navbar .menu a:hover{
   color: #000;
@@ -215,15 +221,15 @@ header.scroll{
 }
 
 .button {
-  display: inline;
+  display: flex;
   outline: none;
   color: #000;
   font-size: 18px;
   font-weight: 500;
   border-radius: 12px;
-  padding: 6px 15px;
+  padding: 5px 15px;
   border: none;
-  margin: 10px 2px 2px 0px;
+  margin: 0px 2px 2px 0px;
   cursor: pointer;
   transition: all 0.3s ease;
   background-image: linear-gradient( 135deg, #F5E5D5  10%, #C5D1EB 100%);
@@ -234,9 +240,13 @@ header.scroll{
    width: 40%;
    margin: 100px 0 0 50px;
  }
+
 .text-content h2{
-  font-size: 27px;
+  font-size: 60px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 .text-content h3{
   font-size: 27px;
@@ -244,11 +254,14 @@ header.scroll{
   display: flex;
   align-items: center;
   position: relative;
+  text-transform: uppercase;
+  color: #333333;
 }
 .text-content p{
-  font-size: 15px;
+  font-size: 25px;
   margin-top: 32px;
   margin-bottom: 32px;
+  font-weight: 600;
 }
 
 @media (max-width:850px) {
