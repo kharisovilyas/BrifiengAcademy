@@ -221,7 +221,8 @@ header.scroll{
   padding: 4px 10px;
 }
 .navbar .menu a:hover{
-  color: #000;
+  border-radius: 3px;
+  color: #3a7999;
 }
 .navbar .buttons input{
   outline: none;
@@ -255,6 +256,11 @@ header.scroll{
   background-image: linear-gradient( 135deg, #F5E5D5  10%, #C5D1EB 100%);
   text-decoration: none;
   }
+  .button :hover {
+    
+    border-radius: 3px;
+  color: #3a7999;
+    }
 
  header .text-content{
    width: 40%;
