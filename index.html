@@ -10,25 +10,25 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
-<div class="newhead">
-  <nav id="without-text" class="navbar1">
-    <div class="logo1"><a href="">>Brifieng Академия</a></div>
-    <ul class="menu1">
-      <li><a href="#about">О нас</a></li>
-      <li><a href="#courses">Курсы</a></li>
-      <li><a href="#teachers">Преподаватели</a></li>
-      <li><a href="#contacts">Контакты</a></li>
-    </ul>
-    <div class="buttons">
-      <a href="reg.html" class="button">Записаться на пробное занятие</a>
-    </div>
-  </nav>
-</div>
   <header>
     <nav class="navbar">
       <div class="logo"><a href="">>Briefing Академия</a></div>
       <ul class="menu">
-        
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#courses">Курсы</a></li>
+        <li><a href="#teachers">Преподаватели</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+      <div class="buttons">
+        <a href="reg.html" class="button">Записаться на пробное занятие</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo"><a href="">>Briefing Академия</a></div>
+      <ul class="menu">
         <li><a href="#about">О нас</a></li>
         <li><a href="#courses">Курсы</a></li>
         <li><a href="#teachers">Преподаватели</a></li>
@@ -42,7 +42,7 @@
       <h2>Learn To Enjoy,<br>Every Moment Of Your Life</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum facere in nam, officiis aspernatur consectetur aliquid sequi possimus et. Sint.</p>
     </div>
-  </header>
+  </div>
   <div id ="about" class="section">
     <div class="text-content">
       <div class="tabsHeader">
@@ -314,21 +314,24 @@
           event.preventDefault();
           var target = this.querySelector('a').getAttribute('href');
           var targetElement = document.querySelector(target);
-          targetElement.scrollIntoView({ behavior: 'smooth' });
+          targetElement.scrollIntoView(
+            { 
+              behavior: 'smooth' 
+            }
+            );
         });
       });
       window.addEventListener('scroll', function() {
         var navbar = document.querySelector('.navbar');
-        var header = document.querySelector('.header');
+        var header = document.querySelector('header');
         var scrollPosition = window.pageYOffset;
-        var newhead = document.querySelector('.newhead');
   
         if (scrollPosition > 0) {
           navbar.classList.add('scroll');
-          newhead.classList.add('animation')
+          header.classList.add('scroll');
         } else {
           navbar.classList.remove('scroll');
-          newhead.classList.remove('animation')
+          header.classList.remove('scroll');
         }
       });
       const cards1 = document.querySelectorAll('.card');

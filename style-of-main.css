@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,7 +17,8 @@
 .fade-out {
   animation: fadeOut 0.5s ease-in-out;
 }
-body{
+
+body {
   scroll-behavior: auto;
   overflow-y: scroll;
   height: 100%;
@@ -27,12 +29,14 @@ body{
   background-image: linear-gradient( 135deg, #f2f5f5  10%, #f2f2f2 100%);
   overflow: auto;
 }
-::selection{
+
+::selection {
   color: #f2f2f2;
   background: #8FB4D4;
 }
+
 body::before,
-body::after{
+body::after {
   content: '';
   position: absolute;
   left: 0;
@@ -40,18 +44,22 @@ body::after{
   height: 100%;
   width: 100%;
 }
-body::before{
+
+body::before {
   clip-path: circle(30% at left 20%);
   opacity: 0.4;
   background-image: linear-gradient( 135deg, #276A7E 10%, #8FB4D4 100%);
 }
-body::after{
+
+body::after {
   opacity: 0.4;
   clip-path: circle(40% at right 80%);
   background-image: linear-gradient( 135deg, #276A7E 10%, #8FB4D4 100%);
 }
+
 .section {
   height: 100vh;
+  padding: 9vh 0vh 0vh 0vh;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -60,8 +68,9 @@ body::after{
   position: relative;
   justify-items: center;
 }
+
 .section::before,
-.section::after{
+.section::after {
   content: '';
   position:absolute;
   left: 0;
@@ -70,30 +79,16 @@ body::after{
   width: 100%;
 }
 
-
-header{
-  height: 90vh;
-  width: 95%;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
-  z-index: 10;
-  border-radius: 25px;
-  margin: auto;
-  margin-top: 1vh;
-  margin-bottom: 9vh;align-items: center; /* Выравнивание по вертикали */
-  justify-content: center; /* Выравнивание по горизонтали */
-  position: relative;
+header {
+  display: none;
 }
 
-header.scroll{
+header.scroll {
   margin: auto;
   background: #f2f2f2;
   display: flex;
-  align-items: center; /* Выравнивание по вертикали */
-  justify-content: center; /* Выравнивание по горизонтали */
+  align-items: center;
+  justify-content: center;
   border-radius: 0%;
   height: 8vh;
   z-index: 100;
@@ -101,83 +96,11 @@ header.scroll{
   position: fixed;
 }
 
-.newhead{
-  position: fixed;
-  background-color: #f2f2f2;
-  height: 8vh;
-  width: 100vw;
-  z-index: 100;
-  opacity: 0;
-}
-
-.navbar1{
-  
-  width: 100%;
-  padding: 10px 50px;
-  justify-content: space-between;
-  align-items: start;
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  transition: transform 0.3s ease-in-out;
-}
-.navbar1 .menu1{
-  display: flex;
-  flex-wrap: wrap;
-}
-.navbar1 .logo1 a{
-  text-decoration: none;
-  font-size: 22px;
-  color: #000;
-  font-weight: 500;
-}
-.navbar1 .menu1 li{
-  list-style: none;
-  margin: 0 6px;
-  float: right;
-}
-.navbar1 .menu1 a{
-  color: #000;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  display: block;
-  padding: 2px 10px;
-}
-.navbar1 .menu1 a:hover{
-  border-radius: 3px;
-  color: #3a7999;
-  
-}
-.navbar1 .buttons input{
-  outline: none;
-  color: #000;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 12px;
-  padding: 6px 15px;
-  border: none;
-  margin: 0 8px;
-  margin-top: 3px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-image: linear-gradient( 135deg, #F5E5D5  10%, #C5D1EB 100%);
-}
-.navbar1 .buttons input:hover{
-  transform: scale(0.97);
-}
-.newhead.animation{
-  opacity: 1;
-  transition: all 0.7s;
-  transform: translateY(0%);
-}
-
-.text-content.scroll{
+.text-content.scroll {
   display: none;
 }
 
-.navbar{
+.navbar {
   margin: auto;
   width: 100%;
   padding: 35px 50px;
@@ -188,22 +111,39 @@ header.scroll{
   flex-direction: row;
   position: fixed;
 }
-.navbar.scroll {
-  transform: translateY(-100%);
+
+.container {
+  align-items: center;
+  height: 98vh;
+  width: 95%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 1vh;
+  margin-bottom: 10vh;
+  position: relative;
 }
-.navbar .menu{
+
+.navbar .menu {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.navbar .logo a{
+
+.navbar .logo a {
   text-decoration: none;
   font-size: 24px;
   color: #000;
   font-weight: 500;
 }
-.navbar .menu li{
+
+.navbar .menu li {
   list-style: none;
   margin: 0px 6px;
   float: right;
@@ -211,7 +151,8 @@ header.scroll{
   justify-content: center;
   padding: 0px;
 }
-.navbar .menu a{
+
+.navbar .menu a {
   color: #000;
   text-decoration: none;
   font-size: 19px;
@@ -224,7 +165,8 @@ header.scroll{
   border-radius: 3px;
   color: #3a7999;
 }
-.navbar .buttons input{
+
+.navbar .buttons input {
   outline: none;
   color: #000;
   font-size: 18px;
@@ -237,7 +179,8 @@ header.scroll{
   transition: all 0.3s ease;
   background-image: linear-gradient( 135deg, #F5E5D5  10%, #C5D1EB 100%);
 }
-.navbar .buttons input:hover{
+
+.navbar .buttons input:hover {
   transform: scale(0.97);
 }
 
@@ -255,19 +198,14 @@ header.scroll{
   transition: all 0.3s ease;
   background-image: linear-gradient( 135deg, #F5E5D5  10%, #C5D1EB 100%);
   text-decoration: none;
-  }
-  .button :hover {
-    
-    border-radius: 3px;
-  color: #3a7999;
-    }
+}
 
- header .text-content{
-   width: 40%;
-   margin: 100px 0 0 50px;
- }
+.container .text-content {
+  width: 40%;
+  margin: 100px 0 0 50px;
+}
 
-.text-content h2{
+.text-content h2 {
   font-size: 60px;
   font-weight: 600;
   display: flex;
@@ -275,7 +213,8 @@ header.scroll{
   justify-self: center;
   position: relative;
 }
-.text-content h3{
+
+.text-content h3 {
   font-size: 35px;
   font-weight: 600;
   color: #333333;
@@ -283,7 +222,7 @@ header.scroll{
   text-align: center;
   margin: auto;
   display: flex;
-  justify-content:start;
+  justify-content: start;
   align-self: center;
   position: relative;
   margin-bottom: 3%;
@@ -291,45 +230,18 @@ header.scroll{
   background-color: #DCDEF5;
   padding: 1px 3px;
 }
-.text-content .tabsHeader{
+
+.text-content .tabsHeader {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   display: flex;
   overflow-x: auto;
   align-items: stretch;
 }
-.text-content p{
+
+.text-content p {
   font-size: 25px;
   margin-top: 32px;
   margin-bottom: 32px;
   font-weight: 600;
-}
-
-@media (max-width:850px) {
-  header .navbar{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 5px;
-  }
-  .navbar .menu {
-    margin: 24px 0 24px 0;
-  }
-  header .text-content{
-    margin: 30px 0 0 20px ;
-    width: 70%;
-  }
-  header .text-content h2{
-    font-size: 20px;
-  }
-}
-@media (max-width:410px) {
-  header{
-    height: 100vh;
-    width: 100%;
-    border-radius: 0px;
-  }
-  header .navbar{
-    padding: 15px 10px;
-}
 }
