@@ -11,10 +11,25 @@
   justify-content: center;
   overflow: hidden;
   background-color: linear-gradient(135deg, #f2f5f5 10%, #f2f2f2 100%);
-  z-index: 0;
+  z-index: 10;
   position: relative;
   justify-items: center;
 }
+/*.section::after,
+.section::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.section::after{
+  opacity: 0.4;
+  clip-path: circle(35% at right 10%);
+  background-image: linear-gradient( 135deg, #276A7E 10%, #8FB4D4 100%);
+}
+*/
 
 .container.courses {
   align-items: center;
@@ -89,7 +104,7 @@
   width: 130px;
   border-radius: 50%;
   padding: 3px;
-  background: #FF676D;
+  background: #F5C4C4;
   margin-bottom: 14px;
 }
 
@@ -108,7 +123,7 @@
 
 .card1 .content .job {
   font-size: 20px;
-  color: #FF676D;
+  color: #F5C4C4;
 }
 
 .card1 .content .media-icons {
@@ -126,7 +141,7 @@
   color: #FFF;
   border-radius: 50%;
   border: 2px solid transparent;
-  background: #FF676D;
+  background: #F5C4C4;
   transition: all 0.3s ease;
 }
 
@@ -151,14 +166,19 @@
   margin: 0 4px;
   cursor: pointer;
   transition: all 0.5s ease;
+  color: #333333;
+  background-color: #333333;
 }
 
 .button1 label.active {
   width: 35px;
+  
+  
 }
 
 #one:checked ~ .button1 .one {
   width: 35px;
+  
 }
 
 #one:checked ~ .button1 .two {
@@ -175,6 +195,7 @@
 
 input[type="radio"] {
   display: none;
+  
 }
 
 @media (max-width: 768px) {
