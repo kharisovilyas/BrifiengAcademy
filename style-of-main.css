@@ -80,10 +80,6 @@ body::after {
 }
 
 header {
-  display: none;
-}
-
-header.scroll {
   margin: auto;
   background: #f2f2f2;
   display: flex;
@@ -94,6 +90,13 @@ header.scroll {
   z-index: 100;
   width: 100%;
   position: fixed;
+  opacity: 0;
+}
+
+header.animation{
+  opacity: 1;
+  transition: all 0.7s;
+  transform: translateY(0%);
 }
 
 .text-content.scroll {
