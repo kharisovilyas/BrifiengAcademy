@@ -49,13 +49,17 @@ body::after {
 body::before {
   clip-path: circle(30% at left 20%);
   opacity: 0.4;
-  background-image: linear-gradient( 135deg, #276A7E 10%, #8FB4D4 100%);
+  background-image: linear-gradient( 135deg, #C5C7DB 10%, #C5C7DB 100%);
 }
 
 body::after {
   opacity: 0.4;
   clip-path: circle(40% at right 90%);
-  background-image: linear-gradient( 135deg, #276A7E 10%, #8FB4D4 100%);
+  background-image: linear-gradient( 135deg, #C5C7DB 10%, #8FB4D4 100%);
+}
+
+nothing_btn{
+  display: inline;
 }
 
 .section {
@@ -120,6 +124,7 @@ header.animation_cancel{
 .text-content.scroll {
   display: none;
 }
+
 
 .navbar {
   margin: auto;
@@ -227,9 +232,26 @@ header.animation_cancel{
 }
 
 .container .text-content {
-  width: 40%;
+  width: 60%;
   margin: 100px 0 0 50px;
 }
+.text-content-about_us {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.text-content-about_us h2{
+letter-spacing: normal;
+  text-transform: none;
+  line-height: 8vh;
+  padding: 10px;
+  overflow: auto;
+  display: flex;
+  overflow-y: auto;
+}
+
 
 .text-content h2 {
   font-size: 60px;
@@ -238,6 +260,9 @@ header.animation_cancel{
   align-items: center;
   justify-self: center;
   position: relative;
+  background-color: #F5F4C4;
+  line-height: 70px
+  
 }
 
 .text-content h3 {
@@ -272,3 +297,5 @@ header.animation_cancel{
   font-weight: 600;
   
 }
+
+

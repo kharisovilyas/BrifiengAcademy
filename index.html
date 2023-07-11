@@ -24,7 +24,7 @@
         <li><a href="#contacts">Контакты</a></li>
       </ul>
       <div class="buttons">
-        <a href="#write_us" class="button">Записаться на пробное занятие</a>
+        <nothing_btn><a href="#write_us" class="button">Записаться на пробное занятие</a></nothing_btn>
       </div>
     </nav>
   </header>
@@ -43,9 +43,11 @@
       </div>
     </nav>
     <div class="text-content">
-      <h2>Учись наслаждаться<br>Каждым моментом твоей жизни</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum facere in nam, officiis aspernatur
-        consectetur aliquid sequi possimus et. Sint.</p>
+      <div class="tabsHeader"><h2>Учись</h2></div>
+      <div class="tabsHeader"><h2>наслаждаться</h2></div>
+      <div class="tabsHeader"><h2>Каждым моментом</h2></div>
+      <div class="tabsHeader"><h2>твоей</h2></div>
+      <div class="tabsHeader"><h2>жизни</h2></div>
     </div>
   </div>
   <div id="about" class="section">
@@ -53,6 +55,17 @@
       <div class="tabsHeader">
         <h3>О нас</h3>
       </div>
+    </div>
+    <div class="text-content-about_us">
+      <h2>
+        Наша миссия - предоставить студентам и профессионалам возможность освоить современные языки программирования,
+        инструменты и технологии, необходимые для успешной карьеры в сфере IT. Мы стремимся создать комфортную и
+        стимулирующую образовательную среду, где каждый студент может раскрыть свой потенциал и достичь своих целей.
+      </h2>
+      <h2>
+        Наша команда состоит из опытных преподавателей и индустриальных экспертов, которые разработали курсы, соответствующие современным требованиям рынка труда. Мы предлагаем широкий спектр курсов, начиная с основ программирования и заканчивая продвинутыми темами, такими как мобильная разработка, искусственный интеллект и большие данные.
+      </h2>
+      <img id="circle">
     </div>
   </div>
   <div id="courses" class="section">
@@ -73,7 +86,6 @@
       <div class="tabsHeader">
         <h3>Курсы</h3>
       </div>
-
     </div>
     <div class="body1">
       <div class="cardContainer inactive">
@@ -385,7 +397,7 @@
       </div>
     </div>
   </div>
-  <div id="wtire_us" class="section_login">
+  <div id="write_us" class="section_login">
     <div class="text-content">
       <div class="tabsHeader">
         <h3>Напишите нам!</h3>
@@ -488,7 +500,6 @@
       //container.style.background = 'linear-gradient(135deg, #000 10%, #8FB4D1 100%) ' + scrollPercentage + '%';
     });
     var menuItems = document.querySelectorAll('li');
-
     menuItems.forEach(function (item) {
       item.addEventListener('click', function (event) {
         event.preventDefault();
@@ -501,7 +512,17 @@
         );
       });
     });
-    //todo переход по кнопке на последний сектор!!!!!! ильяс
+    var btn_write_us = document.querySelector('nothing_btn');
+    btn_write_us.addEventListener('click', function (event1) {
+      btn_write_us.preventDefault();
+      var target1 = this.querySelector('a').getAttribute('href');
+      var targetElement1 = document.querySelector(target1);
+      targetElement1.scrollIntoView(
+        {
+          behavior: 'smooth'
+        }
+      );
+    });
 
     window.addEventListener('scroll', function () {
       var navbar = document.querySelector('.navbar');
