@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style-of-main.css">
   <link rel="stylesheet" href="style-of-card.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style-of-login.css">
   <link rel="stylesheet" href="style-of-footer.css">
   <link rel="stylesheet" href="style-of-courses.css" />
@@ -23,12 +24,38 @@
         <li><a href="#teachers">Преподаватели</a></li>
         <li><a href="#contacts">Контакты</a></li>
       </ul>
-      <div class="buttons">
         <nothing_btn><a href="#write_us" class="button">Записаться на пробное занятие</a></nothing_btn>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
       </div>
     </nav>
+    <div class="dropdown-menu">
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#courses">Курсы</a></li>
+      <li><a href="#teachers">Преподаватели</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+      <li><a href="#write_us" class="button">Записаться на пробное занятие</a></li>
+    </div>
   </header>
-
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    toggleBtn.onclick = function(){
+      dropdownMenu.classList.toggle('open')
+      const isOpen = dropdownMenu.classList.contains('open')
+      toggleBtnIcon.classList = isOpen 
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars'
+    }
+    var scrollPosition = window.pageYOffset;
+    var isOpen = dropdownMenu.classList.contains('open')
+    if(!(scrollPosition > 0) && isOpen){
+      dropdownMenu.classList.remove('open');
+    }else{
+      dropdownMenu.classList.add('open');
+    }
+  </script>
   <div class="container">
     <nav class="navbar">
       <div class="logo"><a href="">>Briefing Академия</a></div>
@@ -38,10 +65,18 @@
         <li><a href="#teachers">Преподаватели</a></li>
         <li><a href="#contacts">Контакты</a></li>
       </ul>
-      <div class="buttons">
-        <a href="#write_us" class="button">Записаться на пробное занятие</a>
+        <nothing_btn><a href="#write_us" class="button">Записаться на пробное занятие</a></nothing_btn>
+      <div class="main_toggle_btn">
+        <i class="fa-solid fa-bars"></i>
       </div>
     </nav>
+    <div class="main-dropdown-menu">
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#courses">Курсы</a></li>
+      <li><a href="#teachers">Преподаватели</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+      <li><a href="#write_us" class="button">Записаться на пробное занятие</a></li>
+    </div>
     <div class="text-content">
       <div class="tabsHeader"><h2>Учись</h2></div>
       <div class="tabsHeader"><h2>наслаждаться</h2></div>
@@ -50,6 +85,26 @@
       <div class="tabsHeader"><h2>жизни</h2></div>
     </div>
   </div>
+  
+  <script>
+    const mainToggleBtn = document.querySelector('.main_toggle_btn');
+    const mainToggleBtnIcon = document.querySelector('.main_toggle_btn i');
+    const mainDropdownMenu = document.querySelector('.main-dropdown-menu');
+    mainToggleBtn.onclick = function(){
+      mainDropdownMenu.classList.toggle('open')
+      const isOpen = mainDropdownMenu.classList.contains('open')
+      mainToggleBtnIcon.classList = isOpen 
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars'
+    }
+    var scrollPosition = window.pageYOffset;
+    var isOpen = mainDropdownMenu.classList.contains('open')
+    if(scrollPosition > 0 && isOpen){
+      mainDropdownMenu.classList.remove('open');
+    }else{
+      mainDropdownMenu.classList.add('open');
+    }
+  </script>
   <div id="about" class="section">
     <div class="text-content">
       <div class="tabsHeader">
@@ -527,18 +582,17 @@
     window.addEventListener('scroll', function () {
       var navbar = document.querySelector('.navbar');
       var header = document.querySelector('header');
+      var mainDropdownMenu = document.querySelector('.main-dropdown-menu');
       var scrollPosition = window.pageYOffset;
 
       if (scrollPosition > 0) {
         //navbar.classList.add('scroll');
         header.classList.add('animation');
         header.classList.remove('animation_cancel');
-
       } else {
         //navbar.classList.remove('scroll');
         header.classList.remove('animation');
         header.classList.add('animation_cancel');
-
       }
     });
     const cards1 = document.querySelectorAll('.card');
