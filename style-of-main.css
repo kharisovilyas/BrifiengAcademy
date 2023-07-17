@@ -10,9 +10,18 @@
 }
 
 @keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
+div {
+  text-align: justify;
+}
+span{}
 
 .fade-out {
   animation: fadeOut 0.5s ease-in-out;
@@ -26,7 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: auto;
-  background-image: linear-gradient( 135deg, #f2f5f5  10%, #f2f2f2 100%);
+  background-image: linear-gradient(135deg, #f2f5f5 10%, #f2f2f2 100%);
   overflow: auto;
 
 }
@@ -49,17 +58,171 @@ body::after {
 body::before {
   clip-path: circle(30% at left 20%);
   opacity: 0.4;
-  background-image: linear-gradient( 135deg, #C5C7DB 10%, #C5C7DB 100%);
+  background-image: linear-gradient(135deg, #C5C7DB 10%, #C5C7DB 100%);
 }
 
 body::after {
   opacity: 0.4;
   clip-path: circle(40% at right 90%);
-  background-image: linear-gradient( 135deg, #C5C7DB 10%, #8FB4D4 100%);
+  background-image: linear-gradient(135deg, #C5C7DB 10%, #8FB4D4 100%);
 }
 
-.nothing_btn{
+.nothing_btn {
   display: inline;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr, 1fr, 1fr;
+grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+  height: 100vh;
+  width: 100vw;
+  justify-items: center;
+}
+
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  height: 95%;
+  width: 95%;
+  background: rgb(245, 244, 196, 0.6);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  border-radius: 25px;
+  margin-top: 1vh;
+  position: relative;
+}
+
+.box2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  height: 95%;
+  width: 95%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 1vh;
+
+  position: relative;
+}
+.box3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 95%;
+  width: 95%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 1vh;
+  position: relative;
+  
+}
+
+.box3:hover{
+  background-image: url(image-background/kovorking1000.jpg);
+  background-size:100% 100%;
+}
+
+
+.box4 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 95%;
+  width: 95%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 1vh;
+
+  position: relative;
+}
+
+.box4:hover{
+  background-image: url(image-background/image-main.jpg);
+  background-size:100% 100%;
+}
+
+.box5 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  height: 95%;
+  width: 95%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 1vh;
+  margin-bottom: 10vh;
+  position: relative;
+}
+
+.box5:hover{
+  background-image: url(image-background/business-pug-working-on-laptop.jpg);
+  background-size:100% 100%;
+}
+
+.box6 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  height: 95%;
+  width: 95%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 1vh;
+  margin-bottom: 10vh;
+  position: relative;
+}
+
+.box6:hover{
+  background-image: url(image-background/pict_2.jpg);
+  background-size:100% 100%;
+}
+
+.box3.anim_1 {
+a
 }
 
 .section {
@@ -69,18 +232,18 @@ body::after {
   align-content: center;
   justify-content: space-around;
   overflow: hidden;
-  background-color: linear-gradient( 135deg, #f2f5f5  10%, #f2f2f2 100%);
+  background-color: linear-gradient(135deg, #f2f5f5 10%, #f2f2f2 100%);
   z-index: 0;
   position: relative;
   justify-items: center;
   display: block;
-  
+
 }
 
 .section::before,
 .section::after {
   content: '';
-  position:absolute;
+  position: absolute;
   left: 0;
   top: 100vh;
   height: 100%;
@@ -98,27 +261,39 @@ header {
   width: 100%;
   position: fixed;
   opacity: 0;
-  display:none;
+  display: none;
 }
 
-header.animation{
+header.animation {
   display: flex;
   animation: ani 0.6s forwards;
   animation-timing-function: ease-out;
 }
+
 @keyframes ani {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
-header.animation_cancel{
+header.animation_cancel {
   display: flex;
   animation: ani_cancel 0.3s forwards;
 }
+
 @keyframes ani_cancel {
-  0% {opacity: 1;}
-  100% {opacity: 0;
-   pointer-events: none;}
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .text-content.scroll {
@@ -155,6 +330,7 @@ header.animation_cancel{
   position: relative;
 
 }
+
 .container p {
   position: relative;
   display: flex;
@@ -192,7 +368,8 @@ header.animation_cancel{
   display: block;
   padding: 4px 10px;
 }
-.navbar .menu a:hover{
+
+.navbar .menu a:hover {
   border-radius: 3px;
   color: #3a7999;
 }
@@ -208,14 +385,14 @@ header.animation_cancel{
   margin: 0 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  background-image: linear-gradient( 135deg, #F5E5D5  10%, #C5D1EB 100%);
+  background-image: linear-gradient(135deg, #F5E5D5 10%, #C5D1EB 100%);
 }
 
 .navbar .buttons input:hover {
   transform: scale(0.97);
 }
 
-.navbar .toggle_btn{
+.navbar .toggle_btn {
   color: #f2f2f2;
   font-size: 1.5rem;
   cursor: pointer;
@@ -235,7 +412,7 @@ header.animation_cancel{
   margin: 0px 2px 2px 0px;
   cursor: pointer;
   transition: all 0.3s ease;
-  background-image: linear-gradient( 135deg, #F5E5D5  10%, #C5D1EB 100%);
+  background-image: linear-gradient(135deg, #F5E5D5 10%, #C5D1EB 100%);
   text-decoration: none;
 }
 
@@ -243,6 +420,7 @@ header.animation_cancel{
   width: 60%;
   margin: 100px 0 0 50px;
 }
+
 .text-content-about_us {
   display: flex;
   flex-direction: row;
@@ -250,7 +428,7 @@ header.animation_cancel{
 
 }
 
-.text-content-about_us h2{
+.text-content-about_us h2 {
   letter-spacing: normal;
   text-transform: none;
   line-height: 8vh;
@@ -260,17 +438,85 @@ header.animation_cancel{
   overflow-y: auto;
 }
 
+.box1 .text-content-main {
+  align-content: center;
+  justify-content: start;
+  justify-self: center;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+}
+.box3 .text-content-main {
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+}
+.box4 .text-content-main {
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+}
+.box5 .text-content-main {
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+}
+.box6 .text-content-main {
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+}
+
+.text-content-main h2 {
+  font-weight: 600;
+  justify-self: center;
+  align-self: center;
+  font-size:5vh;
+
+
+}
+.text-content-main h1 {
+  font-weight: 600;
+  justify-self: center;
+  align-self: center;
+  line-height: calc(100%);
+  font-size: 6vh;
+  /*background-color: #F5F4C4;*/
+}
 
 .text-content h2 {
-  font-size: 60px;
   font-weight: 600;
-  display: flex;
-  align-items: center;
   justify-self: center;
-  position: relative;
+  align-self: center;
+  line-height: calc(100%);
   background-color: #F5F4C4;
-  line-height: 70px
-  
 }
 
 .text-content h3 {
@@ -298,16 +544,23 @@ header.animation_cancel{
   align-items: stretch;
 }
 
+.text-content-main .tabsHeader {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  display: flex;
+
+}
+
 .text-content p {
   font-size: 25px;
   margin-top: 32px;
   margin-bottom: 32px;
   font-weight: 600;
-  
+
 }
 
 /*DROPDOWN MENU*/
-.dropdown-menu{
+.dropdown-menu {
   display: none;
   position: absolute;
   right: 2vb;
@@ -324,24 +577,25 @@ header.animation_cancel{
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dropdown-menu.open{
+.dropdown-menu.open {
   height: 240px;
 }
 
 
-.dropdown-menu li{
+.dropdown-menu li {
   padding: 0.7vb;
   display: flex;
   align-items: end;
   justify-content: center;
 }
 
-.dropdown-menu .button{
+.dropdown-menu .button {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.main-dropdown-menu{
+
+.main-dropdown-menu {
   display: none;
   position: absolute;
   right: 2vb;
@@ -358,12 +612,12 @@ header.animation_cancel{
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.main-dropdown-menu.open{
+.main-dropdown-menu.open {
   height: 240px;
   z-index: 100;
 }
 
-.main-dropdown-menu li{
+.main-dropdown-menu li {
   padding: 0.7vb;
   z-index: 100;
   display: flex;
@@ -371,37 +625,39 @@ header.animation_cancel{
   justify-content: center;
 }
 
-.main-dropdown-menu .button{
+.main-dropdown-menu .button {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.toggle_btn i{
-  color: #000;
-}
-.main_toggle_btn i{
+.toggle_btn i {
   color: #000;
 }
 
-@media(max-width: 1256px){
+.main_toggle_btn i {
+  color: #000;
+}
+
+@media(max-width: 1256px) {
+
   .navbar .menu,
-  .navbar .button{
+  .navbar .button {
     display: none;
   }
 
-  .navbar .toggle_btn{
+  .navbar .toggle_btn {
     display: flex;
   }
 
-  .dropdown-menu{
+  .dropdown-menu {
     display: block;
     align-items: center;
     justify-content: center;
     z-index: 100;
   }
-  
-  .main-dropdown-menu{
+
+  .main-dropdown-menu {
     display: block;
     align-items: center;
     justify-content: center;

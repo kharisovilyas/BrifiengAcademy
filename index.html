@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="style-of-main.css">
   <link rel="stylesheet" href="style-of-card.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style-of-login.css">
   <link rel="stylesheet" href="style-of-footer.css">
   <link rel="stylesheet" href="style-of-courses.css" />
@@ -24,7 +26,7 @@
         <li><a href="#teachers">Преподаватели</a></li>
         <li><a href="#contacts">Контакты</a></li>
       </ul>
-        <nothing_btn><a href="#write_us" class="button">Записаться на пробное занятие</a></nothing_btn>
+      <nothing_btn><a href="#write_us" class="button">Записаться на пробное занятие</a></nothing_btn>
       <div class="toggle_btn">
         <i class="fa-solid fa-bars"></i>
       </div>
@@ -41,22 +43,22 @@
     const toggleBtn = document.querySelector('.toggle_btn');
     const toggleBtnIcon = document.querySelector('.toggle_btn i');
     const dropdownMenu = document.querySelector('.dropdown-menu');
-    toggleBtn.onclick = function(){
+    toggleBtn.onclick = function () {
       dropdownMenu.classList.toggle('open')
       const isOpen = dropdownMenu.classList.contains('open')
-      toggleBtnIcon.classList = isOpen 
-      ? 'fa-solid fa-xmark'
-      : 'fa-solid fa-bars'
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
     }
     var scrollPosition = window.pageYOffset;
     var isOpen = dropdownMenu.classList.contains('open')
-    if(!(scrollPosition > 0) && isOpen){
+    if (!(scrollPosition > 0) && isOpen) {
       dropdownMenu.classList.remove('open');
-    }else{
+    } else {
       dropdownMenu.classList.add('open');
     }
   </script>
-  <div class="container">
+  <!--<div class="container">
     <nav class="navbar">
       <div class="logo"><a href="">>Briefing Академия</a></div>
       <ul class="menu">
@@ -64,7 +66,7 @@
         <li><a href="#courses">Курсы</a></li>
         <li><a href="#teachers">Преподаватели</a></li>
         <li><a href="#contacts">Контакты</a></li>
-      </ul>
+      </u
         <nothing_btn><a href="#write_us" class="button">Записаться на пробное занятие</a></nothing_btn>
       <div class="main_toggle_btn">
         <i class="fa-solid fa-bars"></i>
@@ -85,23 +87,71 @@
       <div class="tabsHeader"><h2>жизни</h2></div>
     </div>
   </div>
-  
+-->
+  <div class="wrapper">
+    <div class="box1">
+      <div class="text-content-main">
+        <div class="tabsHeader">
+          <h2>>Briefing<br />Академия</h2>
+        </div>
+      </div>
+    </div>
+    <div class="box2">
+      <div class="text-content-main">
+        <div class="tabsHeader">
+          <h2>>Br</h2>
+        </div>
+      </div>
+    </div>
+    <div class="box3">
+      <div class="text-content-main">
+        <div class="tabsHeader">
+          <h1>О нас</h1>
+        </div>
+        <ul class="menu"><li> <a href="#about">О нас</a></li> </ul>
+      </div>
+    </div>
+    <div class="box4">
+      <div class="text-content-main">
+        <div class="tabsHeader">
+          <h1>Курсы</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box5">
+      <div class="text-content-main">
+        <div class="tabsHeader">
+          <h1>Преподаватели</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box6">
+      <div class="text-content-main">
+        <div class="tabsHeader">
+          <h1>Контакты</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   <script>
     const mainToggleBtn = document.querySelector('.main_toggle_btn');
     const mainToggleBtnIcon = document.querySelector('.main_toggle_btn i');
     const mainDropdownMenu = document.querySelector('.main-dropdown-menu');
-    mainToggleBtn.onclick = function(){
+    mainToggleBtn.onclick = function () {
       mainDropdownMenu.classList.toggle('open')
       const isOpen = mainDropdownMenu.classList.contains('open')
-      mainToggleBtnIcon.classList = isOpen 
-      ? 'fa-solid fa-xmark'
-      : 'fa-solid fa-bars'
+      mainToggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
     }
     var scrollPosition = window.pageYOffset;
     var isOpen = mainDropdownMenu.classList.contains('open')
-    if(scrollPosition > 0 && isOpen){
+    if (scrollPosition > 0 && isOpen) {
       mainDropdownMenu.classList.remove('open');
-    }else{
+    } else {
       mainDropdownMenu.classList.add('open');
     }
   </script>
@@ -118,7 +168,10 @@
         стимулирующую образовательную среду, где каждый студент может раскрыть свой потенциал и достичь своих целей.
       </h2>
       <h2>
-        Наша команда состоит из опытных преподавателей и индустриальных экспертов, которые разработали курсы, соответствующие современным требованиям рынка труда. Мы предлагаем широкий спектр курсов, начиная с основ программирования и заканчивая продвинутыми темами, такими как мобильная разработка, искусственный интеллект и большие данные.
+        Наша команда состоит из опытных преподавателей и индустриальных экспертов, которые разработали курсы,
+        соответствующие современным требованиям рынка труда. Мы предлагаем широкий спектр курсов, начиная с основ
+        программирования и заканчивая продвинутыми темами, такими как мобильная разработка, искусственный интеллект и
+        большие данные.
       </h2>
       <img id="circle">
     </div>
