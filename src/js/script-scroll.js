@@ -6,8 +6,9 @@ window.addEventListener('scroll', function () {
 });
 
 // Инициализация ScrollReveal
-const sr = ScrollReveal();
+/*const sr = ScrollReveal();
 // Настройки анимации
+
 sr.reveal('.section', {
     duration: 1000,
     distance: '50px',
@@ -22,7 +23,7 @@ sr.reveal('.container', {
     origin: 'bottom',
     reset: true
 });
-/*
+
 // Обработчик события прокрутки колесика мыши
 $(window).on('mousewheel', function (event) {
     // Определение направления прокрутки
@@ -62,12 +63,26 @@ menuItems.forEach(function (item) {
     });
 });
 
+var menuItems = document.querySelectorAll('.ag-courses_item');
+menuItems.forEach(function (item) {
+    item.addEventListener('click', function (event) {
+        event.preventDefault();
+        var target = this.querySelector('a').getAttribute('href');
+        var targetElement = document.querySelector(target);
+        targetElement.scrollIntoView(
+            {
+                behavior: 'smooth'
+            }
+        );
+    });
+});
+
 var btn_write_us = document.querySelector('nothing_btn');
-btn_write_us.addEventListener('click', function (event1) {
+btn_write_us.addEventListener('click', function (event) {
     btn_write_us.preventDefault();
-    var target1 = this.querySelector('a').getAttribute('href');
-    var targetElement1 = document.querySelector(target1);
-    targetElement1.scrollIntoView(
+    var target = this.querySelector('a').getAttribute('href');
+    var targetElement = document.querySelector(target);
+    targetElement.scrollIntoView(
         {
             behavior: 'smooth'
         }

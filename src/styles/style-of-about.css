@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.grid_about {
+    display: grid;
+    gap: 20px;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    justify-items: center;
+    max-width: 1368px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 33vh 46vh;
+    margin: 0vh auto auto auto;
+
+}
+
+.small_container {
+    background-image: linear-gradient(#54708F, #3e536b);
+    position: relative;
+    display: flex;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    top: 2vh;
+    align-content: start;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: start;
+    font-weight: normal;
+}
+
+.small_container:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+
+}
+
+.small_container:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    align-content: start;
+    justify-content: space-around;
+}
+
+.small_container:nth-child(3) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    align-content: start;
+    justify-content: space-around;
+}
+
+.small_container h5 {
+    color: #F9FDFD;
+    font-size: 6vh;
+    margin-left: 3vw;
+
+}
+
+.small_container h6 {
+    color: #F9FDFD;
+    font-size: 3vh;
+    margin-left: 3vw;
+    margin-top: 2vh;
+    font-weight: lighter;
+}
+
+
+.big_container {
+    margin-top: 1vh;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    align-content: start;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+
+    border-radius: 25px;
+
+    border-image: linear-gradient(#f2f5f5 -10%, #54708F 25%, #F6C4B6 80%, #f2f5f5 100%);
+    border-width: 0px 2px;
+    border-style: solid;
+    border-image-slice: 1;
+
+}
+
+.big_container .text_box {
+    height: 100%;
+    width: 65%;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.big_container .taste_us {
+    width: 20vw;
+    height: 20%;
+    background-image: linear-gradient(#54708F -25%, #F6C4B6 120%);
+    justify-self: center;
+    align-self: center;
+    border-radius: 25px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.big_container .taste_us:hover {
+    background: #f2f5f5;
+    border-color: #F6C4B6;
+    border-width: 3px;
+    border-style: solid;
+
+}
+
+.big_container .taste_us:hover .text_box h5 {
+    color: #333;
+    font-weight: bold;
+}
+
+.big_container .taste_us .text_box {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.big_container .taste_us .text_box h5 {
+    color: #F9FDFD;
+    margin: auto;
+    font-size: 2vh;
+    align-self: center;
+    justify-self: center;
+    font-weight: lighter;
+
+}
+
+.big_container .menu {
+    margin-left: 3vw;
+    list-style-type: square;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.big_container .menu li {
+    color: #333;
+    font-size: 2vh;
+    z-index: 100;
+}
+
+
+.big_container h4 {
+    font-size: 4vh;
+    color: #333;
+    margin-left: 3vw;
+    z-index: 100;
+    background: linear-gradient(#54708F 0%, #F6C4B6 120%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-decoration: overline;
+}
+
+.big_container h5 {
+    font-size: 4vh;
+    color: #333;
+    margin-left: 3vw;
+    z-index: 100;
+}
+
+.big_container h6 {
+    margin-left: 3vw;
+    font-size: 2vh;
+    font-weight: lighter;
+    color: #333;
+}
+
+.section_grid {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    z-index: 0;
+}
+
+.grid_buy_it {
+    display: grid;
+    gap: 20px;
+    height: 75vh;
+    width: 100vw;
+    justify-items: center;
+    max-width: 1368px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin: auto;
+
+}
+
+
+
+.buy_it_container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    border-width: 2px;
+    border-style: solid;
+    border-image-slice: 1;
+    border-radius: 25px;
+    border-color: #F6C4B6;
+    align-content: start;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.buy_it_container:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-color: #f2f5f5;
+
+}
+
+.buy_it_container:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.buy_it_container:nth-child(3) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-color: #f2f5f5;
+
+
+}
+
+
+
+.buy_it_container:nth-child(4) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    display: flex;
+    align-content: start;
+    justify-content: flex-start;
+
+}
+
+.buy_it_container .text_box {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    text-align: justify;
+    text-justify: start;
+    margin-top: 2vh;
+}
+
+.buy_it_container .text_box h5 {
+    color: #333;
+    margin: auto 0px;
+    font-size: 6vh;
+    justify-self: start;
+
+
+}
+
+.buy_it_container .text_box h6 {
+    color: #333;
+    margin: auto;
+    font-size: 2vh;
+    align-self: center;
+    justify-self: center;
+    font-weight: lighter;
+}
+
+.buy_it_container .menu li {
+    color: #333;
+    font-size: 2vh;
+
+}
+
+.text_container {
+    background-color: #EBEDED;
+    border-radius: 25px;
+}
+
+
+.buy_it_container:nth-child(2) .text_container {
+    width: 100%;
+    height: 30%;
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    align-content: space-around;
+
+
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+}
+
+.buy_it_container:nth-child(2) .text_container .box:nth-child(1) {
+    height: 100%;
+    width: 30%;
+    max-width: 131px;
+    background-image: url(/image-background/bell2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+
+.buy_it_container:nth-child(2) .text_container .box:nth-child(2) {
+    height: max-content;
+    width: 70%;
+    display: flex;
+    position: relative;
+    align-self: center;
+    margin: 5% auto;
+
+}
+
+
+
+.buy_it_container:nth-child(2) .text_container h6 {
+    width: 100%;
+    height: 100%;
+    float: right;
+    font-size: 2vh;
+    margin: auto;
+    color: #252525;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.buy_it_container:nth-child(2) .box_main {
+    width: 100%;
+    font-size: 2vh;
+    margin: auto;
+    color: #333;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.buy_it_container:nth-child(2) .box_main h6 {
+    width: 75%;
+    height: 30%;
+    font-size: 2vh;
+    margin: 10% 5%;
+    text-align: left;
+    color: #333;
+
+
+}
+
+.buy_it_container:nth-child(2) .box_main .menu {
+    width: 100%;
+    height: 50%;
+    font-size: 2vh;
+    margin: 0% 10% 8%;
+
+
+
+}
+
+.buy_it_container:nth-child(2) .box_main .menu li{
+    color: #F6C4B6;
+}
+.buy_it_container:nth-child(2) .box_main .menu li span{
+    color: #333;
+}
+
+.buy_it_container:nth-child(3) .text_container {
+    width: 100%;
+    height: 90%;
+    background-image: url(/image-background/Vectarytexturefigure.svg);
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: scale(1.75);
+    align-content: space-around;
+    display: flex;
+}
+
+.buy_it_container:nth-child(3) .text_container .box {
+    width: fit-content;
+    height: max-content;
+
+    display: flex;
+    position: relative;
+    align-self: center;
+    margin: auto;
+}
+
+.buy_it_container:nth-child(3) .text_container h6 {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    font-size: 3vh;
+    color: #333;
+    align-self: center;
+    text-align: left;
+
+}
+
+.buy_it_container:nth-child(4) .text_container {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    position: relative;
+    align-content: space-around;
+    align-self: start;
+    justify-content: center;
+}
+
+.buy_it_container:nth-child(4) .text_container .box{
+    height: max-content;
+    width: 80%;
+    display: flex;
+    position: relative;
+    align-self: center;
+    margin: 5% auto;
+    text-align: left;
+}
+.buy_it_container:nth-child(4) .text_container .box h6{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    font-size: 2vh;
+    color: #333;
+    align-self: center;
+    text-align: left;
+    justify-self: center;
+    font-weight: lighter;
+}
+
+.buy_it_container:nth-child(4) .box{
+    height: max-content;
+    width: 80%;
+    display: flex;
+    position: relative;
+    align-self: center;
+    margin: 5% auto;
+    text-align: left;
+}
+.buy_it_container:nth-child(4) .box h6{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    font-size: 2vh;
+    color: #333;
+    align-self: center;
+    text-align: left;
+    justify-self: center;
+
+}
+
+.gradient-text h6{
+    font-size: 4vh;
+    background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+    margin: 20px auto;
+  }
+
+mark {
+    background-color: #F6C4B6;
+}
+
+@media (max-width: 1368px) {
+    .grid_about {
+        width: 90vw;
+    }
+
+    .grid_buy_it {
+        width: 90vw;
+    }
+
+}

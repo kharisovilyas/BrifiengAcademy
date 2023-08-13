@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="../styles/style-of-card-courses.css">
   <link rel="stylesheet" href="../styles/style-of-courses.css">
   <link rel="stylesheet" href="../styles/style-apaditive.css">
+  <link rel="stylesheet" href="../styles/style-of-about.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -21,6 +23,7 @@
 </head>
 
 <body>
+  <img src="/image-background/Vectarytexturefigure.svg" />
   <header>
     <nav class="navbar">
       <div class="logo"><a href="">>Briefing Академия</a></div>
@@ -30,7 +33,7 @@
         <li><a href="#teachers">Преподаватели</a></li>
         <li><a href="#contacts">Контакты</a></li>
       </ul>
-      <nothing_btn><a href="#write_us" class="button">Записаться на пробное занятие</a></nothing_btn>
+      <nothing_btn><a href="#write_us" class="button">Записаться на вводное занятие</a></nothing_btn>
       <div class="toggle_btn">
         <i class="fa-solid fa-bars"></i>
       </div>
@@ -41,193 +44,266 @@
         <li><a href="#courses">Курсы</a></li>
         <li><a href="#teachers">Преподаватели</a></li>
         <li><a href="#contacts">Контакты</a></li>
-        <li><a href="#write_us" class="button">Записаться на пробное занятие</a></li>
+        <li><a href="#write_us" class="button">Записаться на вводное занятие</a></li>
       </div>
     </div>
   </header>
   <div class="wrapper">
     <div class="box_nav" :nth-child>
       <div class="ag-courses-item_title">
-        <h1><mark> Briefing Академия </mark> </h1>
+        <h1><mark> >Briefing Академия </mark> </h1>
       </div>
     </div>
     <div class="box_nav" :nth-child>
       <div class="ag-courses-item_title">
-        <h2><mark>Образование - это ключ к успеху, и мы поможем тебе его получить!</mark></h2>
+        <h2><mark>Образование - это ключ к успеху, и мы поможем тебе его получить! </mark> </h2>
       </div>
     </div>
-    <div class="box_nav" :nth-child>
-      <div class="ag-courses_item">
-        <a href="#about" class="ag-courses-item_link">
-          <div class="ag-courses-item_bg"></div>
-          <div class="ag-courses-item_title">
-            О нас
-          </div>
-          <div class="ag-courses-item_date-box">
-            <span class="ag-courses-item_date">
-              Немного информации о нас и отзывы :)
-            </span>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="box_nav" :nth-child>
-      <div class="ag-courses_item">
-        <a href="#courses" class="ag-courses-item_link">
-          <div class="ag-courses-item_bg"></div>
-          <div class="ag-courses-item_title">
-            Курсы
-          </div>
 
-          <div class="ag-courses-item_date-box">
-            <span class="ag-courses-item_date">
-              Образовательные программы ->
-            </span>
-          </div>
-        </a>
+    <div class="column_nav">
+      <div class="box_nav" :nth-child>
+        <div class="ag-courses_item">
+          <a href="#about" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+            <div class="ag-courses-item_title">
+              О нас
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="box_nav" :nth-child>
-      <div class="ag-courses_item">
-        <a href="#teachers" class="ag-courses-item_link">
-          <div class="ag-courses-item_bg"></div>
-          <div class="ag-courses-item_title">
-            Преподаватели
-          </div>
 
-          <div class="ag-courses-item_date-box">
-            <span class="ag-courses-item_date">
-              Список преподавателей и их достижения 
-            </span>
-          </div>
-        </a>
+      <div class="box_nav" :nth-child>
+        <div class="ag-courses_item">
+          <a href="#courses" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+            <div class="ag-courses-item_title">
+              Курсы
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="box_nav" :nth-child>
-      <div class="ag-courses_item">
-        <a href="#contacts" class="ag-courses-item_link">
-          <div class="ag-courses-item_bg"></div>
+      <div class="box_nav" :nth-child>
+        <div class="ag-courses_item">
+          <a href="#teachers" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+            <div class="ag-courses-item_title">
+              Преподаватели
+            </div>
 
-          <div class="ag-courses-item_title">
-            Контакты
-          </div>
-
-          <div class="ag-courses-item_date-box">
-            <span class="ag-courses-item_date">
-              Вы всегда можете написать нам (;
-            </span>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
+      <div class="box_nav" :nth-child>
+        <div class="ag-courses_item">
+          <a href="#contacts" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+
+            <div class="ag-courses-item_title">
+              Контакты
+            </div>
+
+            <div class="ag-courses-item_date-box">
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="box_nav" :nth-child>
+        <div class="ag-courses_item">
+          <a href="#write_us" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+
+            <div class="ag-courses-item_title">
+              Вводное занятие
+            </div>
+
+            <div class="ag-courses-item_date-box">
+            </div>
+          </a>
+        </div>
+      </div>
+
     </div>
-    <div class="box_button">
-      <a href="#write_us" class="button-main">Записаться на пробное занятие</a>
+
+  </div>
+
+
+  <div id="about" class="grid_about">
+    <div class="small_container">
+      <h6> Общая выручка</br>
+        по клиентам:</h6>
+      <h5>62,4 млн </h5>
+
+    </div>
+    <div class="small_container">
+      <h6> Баллы ЕГЭ сильнейшего</br> преподавателя:
+      </h6>
+      <h5>297</h5>
+    </div>
+    <div class="small_container">
+      <h6> Сопровождаем </br>учеников: </br></h6>
+      <h5>158</h5>
+    </div>
+    <div class="big_container">
+      <div class="text_box">
+        <ul class="menu">
+          <li> <mark>О нас </mark> </li>
+        </ul>
+        
+        <div class="gradient-text"> <h5> Здесь в Briefing, мы работаем </br> с лучшими преподавателями, </br>чтобы <mark>вы</mark> воспроизводили</h5> <h4> наивысшие баллы </h4> </div>
+        <h6>Мы расправились с неэффективностью и формальностями, и мы точно знаем, </br>кого хотим обучать! Возможно
+          это вы и мы с удовольствием это выясним — </br>запланируйте бесплатный звонок-разбор</h6>
+      </div>
+      <a href="#write_us" class="taste_us">
+        <div class="text_box">
+          <h5> Поговорить с нами сегодня </h5>
+        </div>
+      </a>
     </div>
   </div>
-  <div id="about" class="section">
-    <div class="text-content">
 
+
+  <!--<div class="text-content">
       <div class="ag-courses-item_title">
         <h3><mark> О нас</mark> </h3>
       </div>
     </div>
     <div class="about-us-fragment">
-      <div class="text-content-about_us">
-        <h2>
-          Наша миссия - предоставить студентам и профессионалам возможность освоить современные языки программирования,
-          инструменты и технологии, необходимые для успешной карьеры в сфере IT. Мы стремимся создать комфортную и
-          стимулирующую образовательную среду, где каждый студент может раскрыть свой потенциал и достичь своих целей.
+      <div class="text-content-about_us" :nth-child>
+        <h2><mark> Мы небольшая образовательная компания из Санкт-Петербурга, поэтому мы обеспечиваем каждого ученика
+            наилучшими условиями.
+            Наши интенсивы и курсы уже помогли усвоить материал сотням людей.
+            Идея наших курсов - это небольшие группы, в отличие от других школ, в наших группах по 7 - 10 человек.
+          </mark>
+
         </h2>
       </div>
-        <div class="box_rewiew" :nth-child>
-          <i class="fas fa-quote-left quote"></i>
-          <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat
-            thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
-          <div class="content">
-            <div class="info">
-              <div class="name">Alex Smith</div>
-              <div class="job">Designer | Developer</div>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-            <div class="image">
-              <img src="images/profile-1.jpeg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="box_rewiew" :nth-child>
-          <i class="fas fa-quote-left quote"></i>
-          <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat
-            thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
-          <div class="content">
-            <div class="info">
-              <div class="name">Steven Chris</div>
-              <div class="job">YouTuber | Blogger</div>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-            <div class="image">
-              <img src="images/profile-2.jpeg" alt="">
-            </div>
-          </div>
-        </div>
-
-        <div class="box_rewiew" :nth-child>
-          <i class="fas fa-quote-left  quote"></i>
-          <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat
-            thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
-          <div class="content">
-            <div class="info">
-              <div class="name">Kristina Bellis</div>
-              <div class="job">Freelancer | Advertiser</div>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-            <div class="image">
-              <img src="images/profile-3.jpeg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="box_rewiew" :nth-child>
-          <i class="fas fa-quote-left  quote"></i>
-          <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat
-            thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
-          <div class="content">
-            <div class="info">
-              <div class="name">Kristina Bellis</div>
-              <div class="job">Freelancer | Advertiser</div>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-            <div class="image">
-              <img src="images/profile-3.jpeg" alt="">
-            </div>
-          </div>
-        </div>
-
-
+      <div class="text-content-about_us" :nth-child>
+        <h2><mark> Это позволяет обсуждать непонятные для студентов моменты. Отсюда наше название - Брифинг!
+          </mark>
+        </h2>
       </div>
+      <div class="box_rewiew" :nth-child>
+        <i class="fas fa-quote-left quote"></i>
+        <p>Саша - преподаватель от Бога! Математика это его призвание! 😍 объясняет всё доступно и понятно. Обучаясь на курсе хард, могу сказать, что даже темы, которые в школе были непонятны с Сашей решаются очень легко и просто. Очень комфортно с таким учителем готовиться к ЕГЭ😍 спасибо Саше!</p>
+        <div class="content">
+          <div class="info">
+            <div class="name">Полина Борзило
+            </div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="box_rewiew" :nth-child>
+        <i class="fas fa-quote-left quote"></i>
+        <p>Решила сдавать профильную математику в начале декабря, очень крайний срок. Искала очень долго нормальную онлайн-школу, на которой мне будет абсолютно всё понятно и не будет нецензурной лексики ( как это было в других онлайн-школах). И с данной онлайн-школой я совсем не прогадала.</p>
+        <div class="content">
+          <div class="info">
+            <div class="name">Марта Ежова</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="box_rewiew" :nth-child>
+        <i class="fas fa-quote-left  quote"></i>
+        <p>Обучаюсь с конца августа и по сей день. Достаточно много мыслей накопилось касательно преподавания учителей онлайн-школы СОТКА. Наиболее позитивные эмоции вызывают мысли об преподавателе профильной математике, об Александре.</p>
+        <div class="content">
+          <div class="info">
+            <div class="name">София Цветкова</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+
+    </div>-->
   </div>
+
+  <div class="grid_buy_it">
+    <div class="buy_it_container">
+
+      <div class="text_box">
+        <ul class="menu">
+          <li> <mark> Наша ключевая экспертиза </mark></li>
+        </ul>
+        <h5> Подготовка к </br>экзаменам</h5>
+      </div>
+    </div>
+    <div class="buy_it_container">
+
+      <div class="text_container">
+        <div class="box"></div>
+        <div class="box">
+          <h6>Мы предлагаем только рекламу и строим под нее автоворонки продаж, но делаем это с концентрацией хирурга и
+            лучше всех остальных</h6>
+        </div>
+      </div>
+
+
+      <div class="box_main">
+        <h6> Мастерство требует фокусировки, поэтому мы не предлагаем ничего, кроме рекламы:</h6>
+        <ul class="menu">
+          <li><span>Разработка сайтов </span>
+          </li>
+          <li><span>Ведение соц. сетей </span>
+          </li>
+          <li><span>Создание контента </span>
+          </li>
+          <li><span>PR-продвижение</span>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+    <div class="buy_it_container">
+      <div class="text_container">
+        <div class="box">
+          <h6>В течение 7 дней мы запустим первые рекламные объявления с соблюдением вашего фирменного стиля и TOV</h6>
+
+        </div>
+      </div>
+    </div>
+    <div class="buy_it_container">
+      <div class="text_container">
+        <div class="box">
+          <h6> Если вы хотите агентство с которым вы за 2 клика увидите четкий разбор того, сколько было потрачено и
+            сколько заработано — добро пожаловать в MAON!</h6>
+        </div>
+      </div>
+      <div class="box">
+        <h6>Если вам нужен подрядчик, который делает все, но ни в чем не добивается главного — роста вашего бизнеса, то
+          мы не для вас.
+        </h6>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
   <div id="courses" class="section">
     <div class="text-content">
       <div class="tabsHeader">
@@ -565,14 +641,11 @@
     </div>
   </footer>
   -->
-  <!--<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
- -->
 
-  <script src="../js/script-slide.js"></script>
+
   <script src="../js/script-scroll.js"></script>
   <script src="../js/script-dropdown-menu.js"></script>
 
